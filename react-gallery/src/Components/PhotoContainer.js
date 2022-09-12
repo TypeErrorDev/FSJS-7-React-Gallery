@@ -9,21 +9,23 @@ const PhotoContainer = (props) => {
   if (results.length > 0) {
     photos = results.map((photo) => {
       return (
-        <Photos
-          key={photo.id}
-          url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-        />
+        console.log(photo)
+        // <Photos
+        //   key={photo.id}
+        //   url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
+        // />
       );
     });
-  } else {
-    return (photos = <NotFound />);
+    // } else {
+    //   return (photos = <NotFound />);
+    // }
+    return (
+      <div className="photo-container">
+        <h2>Results</h2>
+        <ul>{photos}</ul>
+      </div>
+    );
   }
-  return (
-    <div className="photo-container">
-      <h2>Results</h2>
-      <ul>{photos}</ul>
-    </div>
-  );
-};
 
+};
 export default PhotoContainer;
