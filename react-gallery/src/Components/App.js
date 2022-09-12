@@ -30,16 +30,11 @@ export default class App extends Component {
       )
       .then((data) => data.data)
       .then((response) => {
-        console.log(response);
-        if (query === "cats") {
-          this.setState({ cats: response.data.photos.photo });
-        } else if (query === "cake") {
-          this.setState({ cake: response.data.photos.photo });
-        } else if (query === "dogs") {
-          this.setState({ dogs: response.data.photos.photo });
-        } else {
-          this.setState({ photos: response.data.photos.photo });
-        }
+        console.log(response.photos.photo);
+        this.setState({
+          photos: response.photos.photo,
+          loading: false,
+        });
       })
       .catch((error) => {
         console.log("Error fetching and parsing data", error);
