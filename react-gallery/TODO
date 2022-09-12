@@ -47,3 +47,10 @@ Search Field
     Exceeds Expectations:
         ☐ If no matches are found by the search, the app includes a message to tell the user there are no matches @started(22-09-09 00:38)
 
+
+
+    // how to create the url for each photo
+    const photos = response.photos;
+        const {id, secret, server} = photos.photo[0];
+        const uri = `https://live.staticflickr.com/${server}/${id}_${secret}.jpg`;
+        console.log(uri);

@@ -1,24 +1,15 @@
 import React from "react";
 import Photos from "./Photos";
-import NotFound from "./NotFound";
+// import NotFound from "./NotFound";
 
 const PhotoContainer = (props) => {
   const results = props.data;
-  let photos;
+  let photos = results.map((photo) => (
 
-  if (results.length > 0) {
-    photos = results.map((photo) => {
-      return (
-        console.log(photo)
-        // <Photos
-        //   key={photo.id}
-        //   url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-        // />
-      );
-    });
-    // } else {
-    //   return (photos = <NotFound />);
-    // }
+    // pass props to Photos component
+    <Photos url={results.photos} />
+  ));
+
     return (
       <div className="photo-container">
         <h2>Results</h2>
@@ -27,5 +18,4 @@ const PhotoContainer = (props) => {
     );
   }
 
-};
 export default PhotoContainer;

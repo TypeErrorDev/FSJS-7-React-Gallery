@@ -5,6 +5,8 @@ import SearchForm from "./SearchForm";
 import Nav from "./Nav";
 import PhotoContainer from "./PhotoContainer";
 
+
+
 export default class App extends Component {
   constructor() {
     super();
@@ -16,6 +18,8 @@ export default class App extends Component {
       loading: true,
     };
   }
+
+
   componentDidMount() {
     this.performSearch();
     this.performSearch("cats");
@@ -24,13 +28,13 @@ export default class App extends Component {
   }
 
   performSearch = (query) => {
-    axios
+      axios
       .get(
         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=37ec92b1b2e7bb234eb55808fbb5c687&tags=${query}&per_page=12&format=json&nojsoncallback=1`
       )
       .then((data) => data.data)
       .then((response) => {
-        console.log(response.photos.photo);
+        console.log(response);
         this.setState({
           photos: response.photos.photo,
           loading: false,
@@ -43,10 +47,14 @@ export default class App extends Component {
 
   render() {
     return (
+
       <div className="container">
+        {/* Passing prop to SearchForm.js */}
         <SearchForm onSearch={this.performSearch} />
+        {/*  */}
         <Nav />
-         <PhotoContainer data={this.state.photos} /> 
+        {/* Passing prop to PhotoContainer.js */}
+        <PhotoContainer data={this.state.photos} />
       </div>
     );
   }
