@@ -11,13 +11,19 @@ export default class SearchForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.onSearchChange(this.query.value);
+    this.props.onSearch(this.query.value);
     e.currentTarget.reset();
   };
   render() {
     return (
       <form className="search-form" onSubmit={this.handleSubmit}>
-        <input type="search" name="search" placeholder="Search" required />
+        <input
+          type="search"
+          name="search"
+          placeholder="Search"
+          required
+          ref={(input) => (this.query = input)}
+        />
         <button type="submit" className="search-button">
           <svg
             fill="#fff"
