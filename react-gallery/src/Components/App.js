@@ -34,7 +34,7 @@ export default class App extends Component {
       )
       .then((data) => data.data)
       .then((response) => {
-        console.log(response);
+        console.log(response.photos.photo);
         this.setState({
           photos: response.photos.photo,
           loading: false,
