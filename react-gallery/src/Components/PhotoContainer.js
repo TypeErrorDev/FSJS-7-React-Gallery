@@ -4,11 +4,14 @@ import Photos from "./Photos";
 
 const PhotoContainer = (props) => {
   const results = props.data;
-  let photos = results.map((photo) => (
-
+  let photos = results.map((photo) => {
+    console.log(photo)
+    return (
     // pass props to Photos component
-    <Photos url={results.photos} />
-  ));
+    <Photos id={photo.id} server={photo.server} secret={photo.secret} key={photo.id} title={photo.title} />
+  )}
+  )
+
 
     return (
       <div className="photo-container">
@@ -16,6 +19,6 @@ const PhotoContainer = (props) => {
         <ul>{photos}</ul>
       </div>
     );
-  }
 
+}
 export default PhotoContainer;

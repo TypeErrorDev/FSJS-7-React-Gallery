@@ -30,11 +30,10 @@ export default class App extends Component {
   performSearch = (query) => {
       axios
       .get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=37ec92b1b2e7bb234eb55808fbb5c687&tags=${query}&per_page=12&format=json&nojsoncallback=1`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=37ec92b1b2e7bb234eb55808fbb5c687&text=${query}&per_page=12&format=json&nojsoncallback=1`
       )
       .then((data) => data.data)
       .then((response) => {
-        console.log(response.photos.photo);
         this.setState({
           photos: response.photos.photo,
           loading: false,
