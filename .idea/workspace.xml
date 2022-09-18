@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8607d08f-3091-49ac-9fec-e9f01914bceb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-gallery/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-gallery/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/TODO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-gallery/src/Components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/src/Components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-gallery/src/Components/PhotoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/src/Components/PhotoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-gallery/src/Components/Photos.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/src/Components/Photos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-gallery/src/Components/SearchForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/src/Components/SearchForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,16 +23,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +43,7 @@
       <updated>1663004912448</updated>
       <workItem from="1663004915852" duration="3626000" />
       <workItem from="1663011306208" duration="8376000" />
+      <workItem from="1663499197292" duration="638000" />
     </task>
     <servers />
   </component>
