@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 
 import axios from "axios";
+import apiKey from "../config";
 import SearchForm from "./SearchForm";
 import Nav from "./Nav";
 import PhotoContainer from "./PhotoContainer";
@@ -30,7 +31,7 @@ export default class App extends Component {
   performSearch = (query ) => {
       axios
       .get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=37ec92b1b2e7bb234eb55808fbb5c687&tags=${query}&per_page=12&format=json&nojsoncallback=1`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=12&format=json&nojsoncallback=1`
       )
       .then((data) => data.data)
       .then((response) => {
