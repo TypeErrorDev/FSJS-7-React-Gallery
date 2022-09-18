@@ -1,11 +1,13 @@
 import React, { Component, useState } from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import axios from "axios";
 import apiKey from "../config";
 import SearchForm from "./SearchForm";
 import Nav from "./Nav";
 import PhotoContainer from "./PhotoContainer";
-import {BrowserRouter} from "react-router-dom";
+import NotFound from "./NotFound";
+
 
 
 
@@ -25,21 +27,22 @@ export default class App extends Component {
   componentDidMount() {
     this.performSearch();
     this.performSearch("cats");
-    // this.performSearch("cake");
-    // this.performSearch("dogs");
+    this.performSearch("airplanes");
+    this.performSearch("dogs");
   }
 
   performSearch = (query ) => {
       axios
       .get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${query}&per_page=24&format=json&nojsoncallback=1`
       )
         .then((response)=> {
+          console.log(response)
           if(query === "cats"){
             this.setState({ cats: response.data.photos.photo, loading: false });
           }else if (query === "dogs"){
             this.setState({ dogs: response.data.photos.photo, loading: false });
-          }else if (query === "computers"){
+          }else if (query === "airplanes"){
             this.setState({ computers: response.data.photos.photo, loading: false });
           }else {
             this.setState({
@@ -49,17 +52,8 @@ export default class App extends Component {
             });
           }
         })
-      // .then((data) => data.data)
-      // .then((response) => {
-      //
-      //   // console.log( response.photos.photo);
-      //   this.setState({
-      //     photos: response.photos.photo,
-      //     loading: false,
-      //   });
-      // })
       .catch((error) => {
-        console.log("Error fetching and parsing data", error);
+        console.log("There was an error while fetching and parsing the data :( ", error);
       });
   };
 
@@ -69,10 +63,16 @@ export default class App extends Component {
       <div className="container">
         {/* Passing prop to SearchForm.js */}
         <SearchForm onSearch={this.performSearch} />
-        {/*  */}
         <Nav />
         {/* Passing prop to PhotoContainer.js */}
-        <PhotoContainer data={this.state.photos} />
+        <Switch>
+        <Route exact path='/' render={()=> <PhotoContainer data={this.state.photos} title={this.state.query} query={this.state.query} />} />
+          <Route path='/search/:query' render={() => <PhotoContainer data={this.state.photos} query={this.state.query}/>} />
+          <Route exact path='/cats' render={() => <PhotoContainer data={this.state.cats} title="cats" query="cats"/>}/>
+          <Route exact path='/dogs' render={() => <PhotoContainer data={this.state.dogs} title="dogs" query="dogs" />}/>
+          <Route exact path='/airplanes' render={() => <PhotoContainer data={this.state.computers} title="Airplanes" query="Airplanes"/>}/>
+          <Route component={NotFound} />
+        </Switch>
       </div>
   </BrowserRouter>
     );
