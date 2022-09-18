@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8607d08f-3091-49ac-9fec-e9f01914bceb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-gallery/src/Components/App 2.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/src/Components/App 2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-gallery/src/Components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-gallery/src/Components/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <updated>1663004912448</updated>
       <workItem from="1663004915852" duration="3626000" />
       <workItem from="1663011306208" duration="8376000" />
-      <workItem from="1663499197292" duration="3183000" />
+      <workItem from="1663499197292" duration="4112000" />
     </task>
     <servers />
   </component>
