@@ -19,38 +19,31 @@ Matching the Mockups
 
 Routing
     Meets Expectations:
-        ☐ React Router properly implemented @started(22-09-09 00:38)
-        ☐ URLs correctly match routes @started(22-09-09 00:38)
-        ☐ Clicking a nav link or using the browser's forward and back buttons display the correct data on the page @started(22-09-09 00:38)
+        ✔ React Router properly implemented @started(22-09-09 00:38) @done(22-09-19 02:09) @lasted(1w3d1h31m28s)
+        ✔ URLs correctly match routes @started(22-09-09 00:38) @done(22-09-19 02:09) @lasted(1w3d1h31m28s)
+        ✔ Clicking a nav link or using the browser's forward and back buttons display the correct data on the page @started(22-09-09 00:38) @done(22-09-19 02:09) @lasted(1w3d1h31m28s)
 
     Exceeds Expectations:
-        ☐ Clicking the browser's forward and back buttons navigates the user through all search history, keeping the URL and fetched data in sync for all routes, including the search route @started(22-09-09 00:38)
+        ✔ Clicking the browser's forward and back buttons navigates the user through all search history, keeping the URL and fetched data in sync for all routes, including the search route @started(22-09-09 00:38) @done(22-09-19 02:29) @lasted(1w3d1h51m15s)
         ☐ Apps include a 404-like error route that displays when a URL path does not match an existing route @started(22-09-09 00:38)
 
 Data Fetching
     Meets Expectations:
-        ☐ Uses Flickr API correctly: API Keys and proper Photo source URLs @started(22-09-09 00:38)
-        ☐ Fetched data is passed down to a presentation component (That only renders a list of photos, for example) via props @started(22-09-09 00:38)
+        ✔ Uses Flickr API correctly: API Keys and proper Photo source URLs @started(22-09-09 00:38) @done(22-09-19 02:14) @lasted(1w3d1h36m57s)
+        ✔ Fetched data is passed down to a presentation component (That only renders a list of photos, for example) via props @started(22-09-09 00:38) @done(22-09-19 02:14) @lasted(1w3d1h36m57s)
 
     Exceeds Expectations:
-        ☐ App displays a loading indicator each time the app fetches new data on at least the search route @started(22-09-09 00:38)
+        ✔ App displays a loading indicator each time the app fetches new data on at least the search route @started(22-09-09 00:38) @done(22-09-19 02:34) @lasted(1w3d1h56m32s)
 
 Displaying Data
     Meets Expectations:
-        ☐ No console errors or warnings regarding unique "key" props @started(22-09-09 00:38)
-        ☐ Key props passed to images @started(22-09-09 00:38)
+        ✔ No console errors or warnings regarding unique "key" props @started(22-09-09 00:38) @done(22-09-19 02:15) @lasted(1w3d1h37m1s)
+        ✔ Key props passed to images @started(22-09-09 00:38) @done(22-09-19 02:15) @lasted(1w3d1h37m1s)
 
 Search Field
     Meets Expectations:
-        ☐ Submitting search data returns & displays results @started(22-09-09 00:38)
+        ✔ Submitting search data returns & displays results @started(22-09-09 00:38) @done(22-09-19 02:15) @lasted(1w3d1h37m12s)
 
     Exceeds Expectations:
-        ☐ If no matches are found by the search, the app includes a message to tell the user there are no matches @started(22-09-09 00:38)
+        ✔ If no matches are found by the search, the app includes a message to tell the user there are no matches @started(22-09-09 00:38) @done(22-09-19 02:28) @lasted(1w3d1h50m49s)
 
-
-
-    // how to create the url for each photo
-    const photos = response.photos;
-        const {id, secret, server} = photos.photo[0];
-        const uri = `https://live.staticflickr.com/${server}/${id}_${secret}.jpg`;
-        console.log(uri);

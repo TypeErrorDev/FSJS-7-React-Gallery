@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# FSJS-7-React-Gallery-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+For this project, I will be creating a gorgeous portfolio site to showcase the great projects I've built. The site will contain a mondern landing page, an about page and a series of project pages to show off and detail at my first five projects.
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [How to run the project](#how-to-run-the-project)
+  - [Style Updates](#style-updates)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+In this project, I have created a JSON file to store all of my projects object informations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I also used Pug to complete provided templates that utilize the JSON to generate the markup that is ultimately displayed in the browser.
 
-### `npm run build`
+I used Pug Templates, Node.js and Express to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Used `npm start` to start the server
+- Import the required dependencies
+- Link the JSON with the Pug templates
+- Set up routes to handle requests
+- Set up the middleware to utilize static files like CSS and Images
+- Handle errors (404's, 500's)
+- Set up a Express Server to serve the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Live Site URL: [Express and Nodejs Portfolio hosted by Netlify](https://typeerrordev-express-portfolio.netlify.app/)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built with
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Javascript](https://262.ecma-international.org/13.0/#sec-intro) - ES6
+- [Node.js](https://nodejs.org/en/) - v18.7.0
+- [Express](https://expressjs.com/) - ^4.18.1
+- [Pug](https://pugjs.org/) - ^3.0.2
+- [Body-Parser](https://www.npmjs.com/package/body-parser) - ^1.20.0
+- [Nodemon](https://www.npmjs.com/package/nodemon) - ^2.0./19
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### How to run the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- npm install
+- npm init -y
+- npm install -g nodemon
+- npm install -g pug
+- npm install -g body-parser
+- npm install -g express
+- npm start
 
-## Learn More
+### Style Updates
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Added custom CSS to the Error handling routes
+- Modified the image sizes to ensure they are aligned correctly
+- Added an Avatar image
+- Added box shadows to the Error information
+- Added transition and transform effects to the project cards
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### What I learned
 
-### Code Splitting
+- I learned how to use the Pug Template Engine to generate the markup for the site
+- I learned how to use the Express Server to serve the site
+- I learned how to use the Body Parser to parse the request body
+- I learned how to use the Nodemon to restart the server when changes are made to the project
+- I learned how to use the Node.js Error Handling middleware to handle errors
+- I learned how to use the Node.js Static Middleware to serve static files like CSS and Images
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Author
 
-### Analyzing the Bundle Size
+- Portfolio - [www.MatthewPantel.com](https://www.matthewpantel.com)
+- LinkedIn - [@MatthewPantel](https://www.linkedin.com/in/MatthewPantel)
+- Twitter - [@TypeErrorDev](https://www.twitter.com/TypeErrorDev)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
+I'd like to give thanks to the Student Success Mentors with Team Treehouse, the other students in their Slack channel and my friends on Discord that helped me along the way. Without everyone's support, I'd still be figuring out how to center a <div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Finally, I'd like to acknowledge Voice Chat 3 in #100Devs for assisting me with the project.
