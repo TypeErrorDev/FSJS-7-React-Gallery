@@ -2,7 +2,7 @@
 
 ## Description
 
-For this project, I will be creating a gorgeous portfolio site to showcase the great projects I've built. The site will contain a mondern landing page, an about page and a series of project pages to show off and detail at my first five projects.
+For this project, I used the very popular and in-demand React library to create an image gallery app. With the help of this powerful "MVC" (Model, View, Controller) library, the app will be built in the style of modern single-page applications to keep it fast, modular, and in sync with current web development trends.
 
 ## Table of contents
 
@@ -12,7 +12,7 @@ For this project, I will be creating a gorgeous portfolio site to showcase the g
 - [My process](#my-process)
   - [Built with](#built-with)
   - [How to run the project](#how-to-run-the-project)
-  - [Style Updates](#style-updates)
+  <!-- - [Style Updates](#style-updates) -->
   - [What I learned](#what-i-learned)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -21,61 +21,46 @@ For this project, I will be creating a gorgeous portfolio site to showcase the g
 
 ### The challenge
 
-In this project, I have created a JSON file to store all of my projects object informations.
+In this project, I have utilized the npm package axios to handle the API requests to Flickr's database of images.
 
-I also used Pug to complete provided templates that utilize the JSON to generate the markup that is ultimately displayed in the browser.
+The app will allow users to search for images based on a topic, and display the results in a gallery format.
 
-I used Pug Templates, Node.js and Express to:
-
-- Used `npm start` to start the server
 - Import the required dependencies
-- Link the JSON with the Pug templates
+- Used `npm start` to start the server
 - Set up routes to handle requests
-- Set up the middleware to utilize static files like CSS and Images
-- Handle errors (404's, 500's)
-- Set up a Express Server to serve the project
+- Use the axios package to fetch data from the Flickr API
+- Use React to display the images
 
 ### Links
 
-- Live Site URL: [Express and Nodejs Portfolio hosted by Netlify](https://typeerrordev-express-portfolio.netlify.app/)
+- Live Site URL: [React Gallery App hosted by Netlify](https://typeerrordev-react-gallery.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- [Javascript](https://262.ecma-international.org/13.0/#sec-intro) - ES6
-- [Node.js](https://nodejs.org/en/) - v18.7.0
-- [Express](https://expressjs.com/) - ^4.18.1
-- [Pug](https://pugjs.org/) - ^3.0.2
-- [Body-Parser](https://www.npmjs.com/package/body-parser) - ^1.20.0
-- [Nodemon](https://www.npmjs.com/package/nodemon) - ^2.0./19
+- [React](https://reactjs.org/versions) - v18.2.0
+- [Axios](https://www.npmjs.com/package/axios) - v 0.27.2
+- [Flickr API](https://www.flickr.com/services/developer/api/)
 
 ### How to run the project
 
 - npm install
-- npm init -y
-- npm install -g nodemon
-- npm install -g pug
-- npm install -g body-parser
-- npm install -g express
+- create a config.js file in the src folder
+- add the following code to the config.js file:
+
+```js
+const apiKey = "YOUR_API_KEY";
+export default apiKey;
+```
+
 - npm start
-
-### Style Updates
-
-- Added custom CSS to the Error handling routes
-- Modified the image sizes to ensure they are aligned correctly
-- Added an Avatar image
-- Added box shadows to the Error information
-- Added transition and transform effects to the project cards
 
 ### What I learned
 
-- I learned how to use the Pug Template Engine to generate the markup for the site
-- I learned how to use the Express Server to serve the site
-- I learned how to use the Body Parser to parse the request body
-- I learned how to use the Nodemon to restart the server when changes are made to the project
-- I learned how to use the Node.js Error Handling middleware to handle errors
-- I learned how to use the Node.js Static Middleware to serve static files like CSS and Images
+- How to use React to create a single-page application
+- How to use the axios package to fetch data from an API
+- How to use React Router to set up routes for the app
 
 ## Author
 
