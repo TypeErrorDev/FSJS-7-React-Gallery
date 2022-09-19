@@ -19,7 +19,7 @@ export default class App extends Component {
       dogs: [],
       airplanes: [],
       photos: [],
-      loading: true,
+      loading: false,
       query: "",
     };
   }
@@ -32,6 +32,8 @@ export default class App extends Component {
   }
 
   performSearch = (query) => {
+    // use callback setState to modify state
+    this.setState({ loading: true });
     axios
       .get(
         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${query}&per_page=24&format=json&nojsoncallback=1`

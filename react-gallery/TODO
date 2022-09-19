@@ -25,7 +25,7 @@ Routing
 
     Exceeds Expectations:
         ✔ Clicking the browser's forward and back buttons navigates the user through all search history, keeping the URL and fetched data in sync for all routes, including the search route @started(22-09-09 00:38) @done(22-09-19 02:29) @lasted(1w3d1h51m15s)
-        ☐ Apps include a 404-like error route that displays when a URL path does not match an existing route @started(22-09-09 00:38)
+        ✔ Apps include a 404-like error route that displays when a URL path does not match an existing route @started(22-09-09 00:38) @done(22-09-19 23:39) @lasted(1w3d23h1m42s)
 
 Data Fetching
     Meets Expectations:
@@ -33,7 +33,7 @@ Data Fetching
         ✔ Fetched data is passed down to a presentation component (That only renders a list of photos, for example) via props @started(22-09-09 00:38) @done(22-09-19 02:14) @lasted(1w3d1h36m57s)
 
     Exceeds Expectations:
-        ✔ App displays a loading indicator each time the app fetches new data on at least the search route @started(22-09-09 00:38) @done(22-09-19 02:34) @lasted(1w3d1h56m32s)
+        ✔ App displays a loading indicator each time the app fetches new data on at least the search route @started(22-09-09 00:38) @done(22-09-19 23:34) @lasted(1w3d22h56m3s)
 
 Displaying Data
     Meets Expectations:
