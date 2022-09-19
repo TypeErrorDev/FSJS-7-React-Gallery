@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import axios from "axios";
+// import { trackPromise } from "react-promise-tracker";
 
 // Components
 import apiKey from "../config";

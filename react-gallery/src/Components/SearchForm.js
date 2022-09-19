@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 
 class SearchForm extends Component {
   state = {
-    searchText: "",
+    searchText: "tanks",
   };
 
   onSearchChange = (e) => {
