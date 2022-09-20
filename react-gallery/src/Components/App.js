@@ -1,19 +1,23 @@
-// imports for react, react-router-dom, and components
+/* ==================================
+            REACT IMPORTS
+===================================== */
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import axios from "axios";
-// import { trackPromise } from "react-promise-tracker";
 
-// Components
+/* ==================================
+         COMPONENTS IMPORTS
+===================================== */
 import apiKey from "../config";
 import SearchForm from "./SearchForm";
 import Nav from "./Nav";
 import PhotoContainer from "./PhotoContainer";
 import NotFound from "./NotFound";
 
-export default class App extends Component {
+class App extends Component {
   constructor() {
     super();
+    // Set initial state
     this.state = {
       cats: [],
       dogs: [],
@@ -24,6 +28,9 @@ export default class App extends Component {
     };
   }
 
+  /* ==================================
+          LIFECYCLE METHODS
+===================================== */
   componentDidMount() {
     this.performSearch("cats");
     this.performSearch("airplanes");
@@ -31,15 +38,24 @@ export default class App extends Component {
     this.performSearch();
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.query !== prevProps.query) {
+      this.performSearch();
+    }
+  }
+
+  //In app.js I added a conditional within componentDidUpdate if the new search query was === the previous search query, if not I re-called the perform search function accordingly.
+
+  /* ==================================
+            API FETCH
+===================================== */
   performSearch = (query) => {
-    // use callback setState to modify state
     this.setState({ loading: true });
     axios
       .get(
         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${query}&per_page=24&format=json&nojsoncallback=1`
       )
       .then((response) => {
-        // console.log(response);
         if (query === "cats") {
           this.setState({ cats: response.data.photos.photo, loading: false });
         } else if (query === "dogs") {
@@ -65,6 +81,9 @@ export default class App extends Component {
       });
   };
 
+  /* ==================================
+            RENDER METHOD
+===================================== */
   render() {
     return (
       <BrowserRouter>
@@ -137,3 +156,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;

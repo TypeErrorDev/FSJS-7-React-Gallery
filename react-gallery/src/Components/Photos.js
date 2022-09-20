@@ -1,6 +1,12 @@
+/* ==================================
+            REACT IMPORTS
+===================================== */
 import React from "react";
 
 const Photos = ({ id, secret, server, title }) => {
+  /* ==================================
+            RENDER PHOTOS
+===================================== */
   return (
     <li>
       {/*`PULL IN THE PROP FROM PHOTOCONTAINER.JS */}

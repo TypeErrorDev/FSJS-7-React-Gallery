@@ -1,22 +1,39 @@
+/* ==================================
+            REACT IMPORTS
+===================================== */
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
 class SearchForm extends Component {
+  /* ==================================
+            COMPONENT STATE
+===================================== */
   state = {
-    searchText: "tanks",
+    searchText: "",
   };
 
+  /* ==================================
+            SEARCH HELPER
+===================================== */
   onSearchChange = (e) => {
     this.setState({ searchText: e.target.value });
   };
 
+  /* ==================================
+            SEARCH HANDLER
+===================================== */
   handleSubmit = (e) => {
     e.preventDefault();
     let searchPath = `/search/${this.state.searchText}`;
     this.props.onSearch(this.state.searchText);
     this.props.history.push(searchPath);
+    // this.props.onSearch(this.state.searchText);
     e.currentTarget.reset();
   };
+
+  /* ==================================
+            RENDER SEARCH FORM
+===================================== */
   render() {
     return (
       <form className="search-form" onSubmit={this.handleSubmit}>

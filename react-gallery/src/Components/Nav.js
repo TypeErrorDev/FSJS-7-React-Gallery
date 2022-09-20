@@ -1,7 +1,13 @@
+/* ==================================
+            REACT IMPORTS
+===================================== */
 import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
+  /* ==================================
+           RENDER NAVIGATION
+===================================== */
   return (
     <nav className="main-nav">
       <ul>

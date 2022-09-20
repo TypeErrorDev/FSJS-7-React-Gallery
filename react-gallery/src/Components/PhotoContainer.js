@@ -1,3 +1,6 @@
+/* ==================================
+            REACT IMPORTS
+===================================== */
 import React from "react";
 import Photos from "./Photos";
 import NotFound from "./NotFound";
@@ -5,6 +8,10 @@ import NotFound from "./NotFound";
 const PhotoContainer = (props) => {
   const results = props.data;
   let photos;
+
+  /* ==================================
+        CREATE PHOTO COMPONENTS
+===================================== */
   if (results.length > 0) {
     photos = results.map((photo) => {
       // console.log(photo);
@@ -23,6 +30,9 @@ const PhotoContainer = (props) => {
     photos = <NotFound />;
   }
 
+  /* ==================================
+            RENDER PHOTOS
+===================================== */
   return (
     <div className="photo-container">
       <h2>{props.query}</h2>
