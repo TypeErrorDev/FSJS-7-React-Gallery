@@ -2,7 +2,7 @@
             REACT IMPORTS
 ===================================== */
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import axios from "axios";
 
 /* ==================================
@@ -38,13 +38,30 @@ class App extends Component {
     this.performSearch();
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.query !== prevProps.query) {
-      this.performSearch();
+
+componentDidUpdate(prevProps, prevState, snapshot) {
+
+    // This function checks the URL to see if its changed, if it has, then it will split the query from the URL 
+  const checkURL = (newQuery) => {
+    if(newQuery.includes("search")){
+      this.performSearch(newQuery.split("/search/"));
+    }
+  }
+    const newQuery = this.props.location.pathname;
+    const oldQuery = prevProps.location.pathname;
+    if (newQuery !== oldQuery) {
+      checkURL(newQuery);
     }
   }
 
-  //In app.js I added a conditional within componentDidUpdate if the new search query was === the previous search query, if not I re-called the perform search function accordingly.
+  checkURL = (newQuery) => {
+    if(newQuery.includes("search")){
+      this.performSearch(newQuery.split("/search/"));
+    }
+  }
+
+
+  //In app.js I added a conditional within componentDidUpdate if the new search query was === the previous search query, if not I re-called the performSearch function accordingly.
 
   /* ==================================
             API FETCH
@@ -86,7 +103,7 @@ class App extends Component {
 ===================================== */
   render() {
     return (
-      <BrowserRouter>
+
         <div className="container">
           {/* Passing prop to SearchForm.js */}
           <SearchForm onSearch={this.performSearch} />
@@ -152,9 +169,9 @@ class App extends Component {
             </Switch>
           )}
         </div>
-      </BrowserRouter>
+
     );
   }
 }
 
-export default App;
+export default withRouter(App);
