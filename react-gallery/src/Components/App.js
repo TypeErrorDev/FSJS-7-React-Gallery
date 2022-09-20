@@ -41,7 +41,7 @@ class App extends Component {
 
 componentDidUpdate(prevProps, prevState, snapshot) {
 
-    // This function checks the URL to see if its changed, if it has, then it will split the query from the URL 
+    // This function checks the URL to see if its changed, if it has, then it will split the query from the URL
   const checkURL = (newQuery) => {
     if(newQuery.includes("search")){
       this.performSearch(newQuery.split("/search/"));
