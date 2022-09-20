@@ -8,7 +8,6 @@ For this project, I used the very popular and in-demand React library to create 
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [How to run the project](#how-to-run-the-project)
@@ -30,10 +29,6 @@ The app will allow users to search for images based on a topic, and display the 
 - Set up routes to handle requests
 - Use the axios package to fetch data from the Flickr API
 - Use React to display the images
-
-### Links
-
-- Live Site URL: [React Gallery App hosted by Netlify](https://typeerrordev-react-gallery.netlify.app/)
 
 ## My process
 
