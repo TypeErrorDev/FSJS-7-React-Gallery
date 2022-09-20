@@ -20,14 +20,13 @@ class SearchForm extends Component {
   };
 
   /* ==================================
-            SEARCH HANDLER
+            SEARCH HELPER
 ===================================== */
   handleSubmit = (e) => {
     e.preventDefault();
     let searchPath = `/search/${this.state.searchText}`;
     this.props.onSearch(this.state.searchText);
     this.props.history.push(searchPath);
-    // this.props.onSearch(this.state.searchText);
     e.currentTarget.reset();
   };
 
